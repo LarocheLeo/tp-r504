@@ -13,4 +13,4 @@ jobs:
         run: |
           pip3 install pytest
       - name: Run tests
-        run: pytest TP1/test.p
+        run: pytest TP1/test.py
