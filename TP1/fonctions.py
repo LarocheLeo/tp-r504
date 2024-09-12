@@ -7,4 +7,5 @@ def puissance(a,b):
 		raise TypeError("Only integers are allowed")
 		
 	k= a**b
-	print("le résultât de a puissance b :", k)
+	return k
+	#print("le résultât de a puissance b :", k)
