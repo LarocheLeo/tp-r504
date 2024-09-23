@@ -1,6 +1,6 @@
 #création d'une image basée sur debian 11 
 
-From debian:11
+From python:3
 
 #après un update et upgrade, on lui rajoute des packets 
 
@@ -8,26 +8,27 @@ RUN apt-get update -y \
 && apt-get upgrade -y \
 && apt-get install build-essential -y \
 && apt-get install pkg-config -y \
-&& apt-get install python-dev -y \
+&& apt-get install python3-dev -y \
 && apt-get install python3-pip -y \
-&& apt-get install default-libmysqlclient-dev -y \
+&& apt-get install default-libmysqlclient-dev -y
 
 #on install pip et on le met à jour, plus installation de packet
 
-RUN pip3 install --upgrade pip -y \
-&& pip3 install flask-mysqldb -y \
-&& pip3 install mysql-connector-python -y \
+RUN pip3 install --upgrade pip
+RUN pip3 install flask-mysqldb
+RUN pip3 install mysql-connector-python
 
 #création d'un dossier 
 
-RUN mkdir -p /svr/templates \
+CMD mkdir /svr/templates
+WORKDIR /svr/templates
 
 #on copie des fichiers dans le dossier créer. 
 
-COPY index.html /svr/templates \
-COPY app_1.py /svr/ \
+COPY index.html /svr/templates
+COPY app_1.py /svr/
 
 #ajout commande flask 
 
-CMD ["flask","--app","/svr/app1","run","--host=0.0.0.0"] \
+CMD ["flask","--app","/svr/app_1","run","--host=0.0.0.0"] 
 
