@@ -31,4 +31,3 @@ COPY app_1.py /svr/
 #ajout commande flask 
 
 CMD ["flask","--app","/svr/app_1","run","--host=0.0.0.0"] 
-
