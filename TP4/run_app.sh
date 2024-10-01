@@ -1,5 +1,6 @@
 docker run -d \
-    --name tp4-app \
+    --name tp4-app-D2 \
     --network net-tp4 \
     -p 5000:5000 \
-    im-tp4
+    -v "$(pwd)/TP4/srv:/srv" \ 
+    im-tp4-v2
