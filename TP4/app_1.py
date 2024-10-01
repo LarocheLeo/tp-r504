@@ -23,10 +23,6 @@ def index():
     cursor.execute(query)
     data = cursor.fetchall()
     
-    # Close the cursor and connection
-    cursor.close()
-    conn.close()
-    
     return render_template('index.html', data=data)
 
 if __name__ == '__main__':
