@@ -4,13 +4,13 @@ From python:3
 
 #après un update et upgrade, on lui rajoute des packets 
 
-RUN apt-get update -y \
-&& apt-get upgrade -y \
-&& apt-get install build-essential -y \
-&& apt-get install pkg-config -y \
-&& apt-get install python3-dev -y \
-&& apt-get install python3-pip -y \
-&& apt-get install default-libmysqlclient-dev -y
+RUN apt-get update -y 
+RUN apt-get upgrade -y 
+RUN apt-get install build-essential -y 
+RUN apt-get install pkg-config -y 
+RUN apt-get install python3-dev -y 
+RUN apt-get install python3-pip -y 
+RUN apt-get install default-libmysqlclient-dev -y
 
 #on install pip et on le met à jour, plus installation de packet
 
