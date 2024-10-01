@@ -2,13 +2,20 @@
 FROM python:3
 
 # Mise à jour du système et installation des paquets nécessaires
+
 RUN apt-get update -y 
 RUN apt-get upgrade -y 
-RUN apt-get install -y build-essential pkg-config python3-dev python3-pip default-libmysqlclient-dev
+RUN apt-get install build-essential -y 
+RUN apt-get install pkg-config -y 
+RUN apt-get install python3-dev -y 
+RUN apt-get install python3-pip -y 
+RUN apt-get install default-libmysqlclient-dev -y
 
 # Mise à jour de pip et installation des paquets Python nécessaires
-RUN pip3 install --upgrade pip 
-RUN pip3 install flask-mysqldb mysql-connector-python
+RUN pip3 install --upgrade pip
+RUN pip3 install flask-mysqldb
+RUN pip3 install mysql-connector-python
+
 
 # Création des répertoires nécessaires
 RUN mkdir -p /srv/templates
@@ -19,8 +26,6 @@ WORKDIR /srv/templates
 # Copier le fichier index.html dans l'image
 COPY index.html /srv/templates/
 
-# Exposer le port 5000 pour Flask
-EXPOSE 5000
 
 # Commande pour lancer l'application Flask
 CMD ["flask", "--app", "/srv/app_1.py", "run", "--host=0.0.0.0"]
