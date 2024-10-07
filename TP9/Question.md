@@ -9,3 +9,5 @@
     Chercher si cela est un choix pertinent. Pourquoi ? : C'est un choix logique et pertinent car le port 1234 est utiliser pour le tcp et udp. 
 
 # Q2.3 - Modifier les deux programmes pour que le serveur renvoie la chaîne reçue au client, et que celui-ci attende cette chaîne et l’affiche avant de quitter.
+
+    
