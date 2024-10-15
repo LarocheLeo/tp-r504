@@ -1,8 +1,10 @@
+#Question 2.6 & 2.7
+
 # URL de base
 url="http://localhost:83"
 
 # Nombre d'appels
-calls=6
+calls=10
 
 # Initialiser une variable pour suivre le dernier serveur
 last_server=""
@@ -24,9 +26,9 @@ for ((i=1; i<=calls; i++)); do
 
     # Vérifier si la réponse alterne entre les serveurs
     if [[ "$current_server" == "$last_server" ]]; then
-        echo "Appel $i : Erreur - réponse du même serveur $current_server"
+        echo "Appel $i : $current_server"
     else
-        echo "Appel $i : Réponse correcte - serveur $current_server"
+        echo "Appel $i : $current_server"
     fi
 
     # Mettre à jour le dernier serveur
