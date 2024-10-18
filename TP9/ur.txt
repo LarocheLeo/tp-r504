@@ -1,0 +1,88 @@
+
+java ClientHTTP www.univ-rouen.fr > ur.txt
+
+
+HTTP/1.1 302 Found
+Date: Fri, 18 Oct 2024 12:50:05 GMT
+Server: Apache
+Location: https://www.univ-rouen.fr/
+Content-Length: 210
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>302 Found</title>
+</head><body>
+<h1>Found</h1>
+<p>The document has moved <a href="https://www.univ-rouen.fr/">here</a>.</p>
+</body></html>
+
+
+
+
+java ClientHTTP www.javaworld.com >> ur.txt
+
+
+HTTP/1.1 301 Moved Permanently
+Server: nginx
+Date: Fri, 18 Oct 2024 13:17:03 GMT
+Content-Type: text/html
+Content-Length: 162
+Connection: close
+Location: https://www.javaworld.com/
+x-rq: lhr3 
+
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+
+
+
+java ClientHTTP www.wikipedia.fr >> ur.txt
+
+
+HTTP/1.1 301 Moved Permanently
+Server: nginx
+Date: Fri, 18 Oct 2024 13:40:34 GMT
+Content-Type: text/html
+Content-Length: 162
+Connection: close
+Location: https://www.wikipedia.fr/
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+Erreur!
+
+
+
+HTTP/1.0 301 Moved Permanently
+Content-Type: application/binary
+X-Content-Type-Options: nosniff
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Date: Fri, 18 Oct 2024 13:43:20 GMT
+Location: https://www.youtube.com/
+Server: ESF
+Content-Length: 0
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+
+HTTP/1.1 301 Moved Permanently
+Content-Length: 0
+Location: https://www.github.com/
+connection: close
+
