@@ -10,5 +10,6 @@ while True :
 
 import fonctions as f 
 
-
-res = f.puissance() 
+a = int(input("premier nombre :" ))
+b = int(input("second nombre :" ))
+res = f.puissance(a,b) 
