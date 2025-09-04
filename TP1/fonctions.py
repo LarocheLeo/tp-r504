@@ -8,16 +8,17 @@ def puissance(a,b) :
 		raise TypeError("Only integers are allowed")
 	if not type(b) is int:
 		raise TypeError("Only integers are allowed")
+	c = 1 
+	for i in range(b) :
+
+		c = c*a 
+	
 
 
 
 
 
-
-
-
-
-	c = a**b 
+	#c = a**b 
 	print("le nombre entier a puissance b est :", c ) 
 	return c
 
