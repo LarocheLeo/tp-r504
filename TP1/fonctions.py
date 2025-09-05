@@ -21,7 +21,7 @@ def puissance(a,b) :
 		return c 
 	else : 
 
-		for i in range(abs(b)) : #sinon, si b est bien négatif, on fait ce calcul et on verrifie si ce n'est pas une dévision par 0
+		for i in range(abs(b)) : #sinon, si b est bien négatif, on fait ce calcul et on verrifie si ce n'est pas une dévision par 0, abs très important sinon rien ne marche ! 
 			c = c*a 
 			d = 1/c #peut fonctionner grâce à return 1/0
 		print(d)
