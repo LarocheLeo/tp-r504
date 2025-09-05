@@ -17,6 +17,6 @@ jobs:
         run: pytest TP1/test.py
       - name : lancement des variable
         run:
-          echo 'Nom de la branche ${{ github.ref }}'
-          echo "Nom du repo ${{ github.repositoy}}"
-          echo "L'os utilsié  ${{ runner.os }}"
+          echo 'Nom de la branche ${{ github.ref }}\n'
+          echo "Nom du repo ${{ github.repositoy}}\n"
+          echo "L'os utilsié  ${{ runner.os }}\n"
