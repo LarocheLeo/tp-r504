@@ -1,5 +1,5 @@
 import pytest
-import fonctions as f 
+import fonctions_entier_flottant as f 
 
 def test_1(): #test pour voir si tout fonctionne bien normalement 
 	assert f.puissance2(2,3) == 8 
