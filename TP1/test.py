@@ -23,3 +23,7 @@ def test_4():
         assert f.puissance(0,-1)
         assert f.puissance(0,-10)
         assert f.puissance(0,-100)
+
+def test_exec_1(): 
+	with pytest.raises(Exception):
+		f.puissance(0,-1)
