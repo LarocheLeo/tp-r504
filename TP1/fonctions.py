@@ -15,7 +15,6 @@ def puissance(a,b) :
 	
 	if b>=0 : # calcul de puissance plus complexe  
 		for i in range(b) : #si b est postif alors on fait ce calcul 
-
 			c = c*a 
 		print(c)
 		return c 
