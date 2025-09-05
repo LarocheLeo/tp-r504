@@ -9,6 +9,8 @@ def puissance(a,b) :
 	if not type(b) is int:
 		raise TypeError("Only integers are allowed")
 	c = 1
+	if a == 0 and b < 0:
+		return 1/0 
 	if a>=0 :  
 		for i in range(b) :
 
