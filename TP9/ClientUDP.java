@@ -13,11 +13,18 @@ public class ClientUDP {
 		DatagramPacket packet = new DatagramPacket( data, data.length, addr, 1234 );
 		DatagramSocket sock = new DatagramSocket();
 		sock.send(packet);
+
+		System.out.println( "-Waiting data" );
+		sock.receive(packet);
+		String str = new String(packet.getData() );
+		System.out.println( "str=" + str );
+
 		sock.close();
-	}
+		}
+
 	catch ( Exception ex ){
 
 	System.out.println ( "erreur" );
 	}
-}
+	}
 }
