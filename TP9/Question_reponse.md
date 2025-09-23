@@ -45,35 +45,50 @@ Notre programme demande certaines choses pour récupèrer des informations cepen
 
 #### Q4.6 - Analyser la réponse de www.univ-rouen.fr (voir le fichier ur.html) et observez les en-têtes. En comparant avec la page en.wikipedia.org/wiki/List_of_HTTP_header_fields, indiquez ci-dessous les champs renvoyés par le serveur et indiquez leur sens :
 
-'''
+
+```
 HTTP/1.1 302 Found 
-'''
+
+```
 Ce champ informe la version HTTP utiliser, le code de retour 302 (Redirections d'url non permanentes) et si la page était trouver.
-'''
+
+```
 Date: Tue, 23 Sep 2025 07:46:44 GMT
-'''
+
+```
 Précise la date et l'heure où le message est envoyer.
-'''
+
+```
 Server: Apache
-'''
+
+```
 Indique le nom du serveur. 
-'''
+
+```
 Location: https://www.univ-rouen.fr/
-'''
+
+```
 Location est utilsier dans une redirection ou quand une nouvelle ressource est créer. Ici, nous somme dans un cas de redirection.
-'''
+
+```
 Content-Length: 210
-'''
+
+```
 Ce champs indique la longueur du corps de la requette en octets.
-'''
+
+```
 Connection: close
-'''
+
+```
 C'est un champ de controle pour la connextion actuelle. 
-'''
+
+```
 Content-Type: text/html; charset=iso-8859-1
-'''
+
+```
 Le type de media renvoyer dans le corps de la request juste en dessous.
-'''
+
+```
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html><head>
 <title>302 Found</title>
@@ -81,7 +96,8 @@ Le type de media renvoyer dans le corps de la request juste en dessous.
 <h1>Found</h1>
 <p>The document has moved <a href="https://www.univ-rouen.fr/">here</a>.</p>
 </body></html>
-'''
+
+```
 Le corps de la requette, il est écrit en HTML et donne diverse informations sur le site qu'on demande. Ici, www.univ-rouen.fr.
 
 
