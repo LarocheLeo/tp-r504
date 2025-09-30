@@ -103,7 +103,10 @@ sur la branche main, on ne peut pas voir.
 
 On vois ce qui était rajouter ou retirer au fichier local par rapport au ficher sur github
 
-###
+### Demander à votre voisin son id et cloner son dépot tp-r504 dans votre home. Ajouter du texte dans le "readme". Avez-vous un moyen de transmettre vos modifications à son dépot ?
+
+non, on peut pas car on est pas propriétaire.
+
 ###
 ###
 ###
