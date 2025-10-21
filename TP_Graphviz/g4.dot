@@ -1,15 +1,15 @@
 graph {
-node [style="filled" fillcolor="aqua"];
-edge [fontsize="20pt" color="red"];
+node [style="filled" fillcolor="" ];
+edge [fontsize="20pt" color="red"fontcolor="blue" fontsize="12"];
 
-A [pos="10,5!"];
-B [pos="7,8!"];
-C [pos="7,4!"];
-D [pos="4,4!"];
-E [pos="5,1!"];
-F [pos="1,2!"];
-G [pos="2,6!"];
-H [pos="4,8!"];
+A [pos="10,5!" image="icon_router.png" shape="none" fixedsize=true fontcolor="red" fontsize="20"];
+B [pos="7,8!" image="icon_router.png" shape="none" fixedsize=true fontcolor="red" fontsize="20"];
+C [pos="7,4!" image="icon_router.png" shape="none" fixedsize=true fontcolor="red" fontsize="20"];
+D [pos="4,4!" image="icon_router.png" shape="none" fixedsize=true fontcolor="red" fontsize="20"];
+E [pos="5,1!" image="icon_router.png" shape="none" fixedsize=true fontcolor="red" fontsize="20"];
+F [pos="1,2!" image="icon_router.png" shape="none" fixedsize=true fontcolor="red" fontsize="20"];
+G [pos="2,6!" image="icon_router.png" shape="none" fixedsize=true fontcolor="red" fontsize="20"];
+H [pos="4,8!" image="icon_router.png" shape="none" fixedsize=true fontcolor="red" fontsize="20"];
 
 
 B -- A [label="1"];
