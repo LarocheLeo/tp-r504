@@ -186,4 +186,11 @@ vagrant@debian11:~$ curl http://192.168.56.10
 ### Q5.1 - Dans la VM, editer le fichier /etc/ssh/sshd_config et ajouter la ligne ForwardX11 yes
 ### Q5.2 - Redémarrer la VM et s’y connecter avec $ vagrant -Y ssh
 
-pas réussi. 
+```
+X11Forwarding yes
+X11DisplayOffset 10
+X11UseLocalhost no
+
+```
+
+X11UseLocalhost était avant en "yes" est rien ne fonctionner. Cependant en métant en "no", cela fonctionne enfin. 
