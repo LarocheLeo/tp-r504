@@ -4,7 +4,7 @@ count1=0
 count2=0
 while [ $x -lt 500 ]; 
 do
-	response=$(curl -s http://localhost:83)
+	response=$(curl -s http://localhost:83) # -s (silent) mode silencieux, permet de ne pas afficher le chargement des requêtes.
 	if [[ "$response" == "<h1>Hello 1</h1>" ]]; then
 		((count1++))
 	elif [[ "$response" == "<h1>Hello 2</h1>" ]]; then

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+mkdir tp-B/nginx
+mkdir tp-B/app1 
+mkdir tp-B/app2 
+
+touch tp-B/nginx/Dockerfile
+touch tp-B/nginx/nginx.conf
+
+
+touch tp-B/app1/app.py
+touch tp-B/app1/requirements.txt
+touch tp-B/app1/Dockerfile
+
+
+touch tp-B/app2/app.py
+touch tp-B/app2/requirements.txt
+touch tp-B/app2/Dockerfile
+

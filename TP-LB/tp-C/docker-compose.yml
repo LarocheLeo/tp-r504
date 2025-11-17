@@ -1,0 +1,39 @@
+
+# 3.2 Simplification de la construction
+# version: '3'
+# services:
+#   s-app1:
+#     build: ./appli
+#     container_name: s-app1-c
+#     ports:
+#       - "5001:5000"
+#   s-app2:
+#     build: ./appli
+#     container_name: s-app2-c
+#     ports:
+#       - "5002:5000"
+#   s-nginx:
+#     image: nginx:latest
+#     container_name: s-nginx-c
+#     ports:
+#       - "8080:80"
+#     volumes:
+#       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+#     depends_on:
+#       - s-app1
+#       - s-app2
+
+# 3.3 "Scaling" des services dans docker compose
+
+services:
+  app:
+    build: ./appli
+#    ports:
+#      - "5000"
+  s-nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+
