@@ -28,12 +28,15 @@
 services:
   app:
     build: ./appli
-#    ports:
-#      - "5000"
+    ports:
+      - "5000"
   s-nginx:
     image: nginx:latest
     ports:
       - "8080:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+
 
