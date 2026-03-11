@@ -1,0 +1,9 @@
+FROM alpine:latest
+
+RUN apk add --no-cache bash redis
+
+COPY consumer.sh /srv/
+
+WORKDIR /srv
+
+CMD ["bash", "-c", "./consumer.sh"]
