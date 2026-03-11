@@ -9,3 +9,15 @@ Le producer, créer beaucoup de donnée en très peu de temps, cependant cet aff
 ### Q2.8
 
 Avec un second consumer, on note qu'il y a bien une diminution légère, cependant les deux consumer sont toujours submerger par l'afflux de données. 
+
+
+## 2.2 Monitoring et auto-adaptation
+
+### Q2.15
+
+Après que test, le nombre maximun de consumer se trouve entre 30 et 35. 
+
+En dessous, la liste augmente. Donc sa créer des consumers.
+Et au dessus la liste baisse faisant disparaitres des consumers car il en à trop.
+
+et donc entre les deux valeurs, la liste se stabilise. 
