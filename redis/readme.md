@@ -21,3 +21,7 @@ En dessous, la liste augmente. Donc sa créer des consumers.
 Et au dessus la liste baisse faisant disparaitres des consumers car il en à trop.
 
 et donc entre les deux valeurs, la liste se stabilise. 
+
+### Q2.16
+
+Le problème principe est sa lenteur. Le programme prend beaucoup de temps pour faire ces cycles et donc augmenter les consumers. Mais aussi c'est le nombre de création de consumer. On à un consumer toutes les 3 secondes ce qui est largement pas assez et permet donc à la liste de se remplire. 
