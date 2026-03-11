@@ -2,7 +2,7 @@
 
 
 threshold=30000      # seuil d’alarme
-delay_process=2      # pause en cas d’alarme
+delay_process=4      # pause en cas d’alarme
 empty_wait=2         # attente si liste vide
 
 redis-cli DBSIZE >/dev/null
