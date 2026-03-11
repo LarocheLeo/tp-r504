@@ -1,9 +1,13 @@
 FROM alpine:latest
 
+# Installation de bash et redis
 RUN apk add --no-cache bash redis
 
+# Copie le script producer
 COPY consumer.sh /srv/
 
+# Définie le dossier de travail
 WORKDIR /srv
 
+# Lance le consumer au démarrage du conteneur
 CMD ["bash", "-c", "./consumer.sh"]

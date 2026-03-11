@@ -1,9 +1,9 @@
 #!/bin/bash
-
+# variable 
 PARAM=s_redis
-threshold=30000      # seuil d’alarme
-delay_process=4      # pause en cas d’alarme
-empty_wait=2         # attente si liste vide
+threshold=30000
+delay_process=4
+empty_wait=2
 
 redis-cli -h $PARAM DBSIZE >/dev/null
 if ! [ $? = 0 ]

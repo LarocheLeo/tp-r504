@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# variable 
 PARAM=s_redis
 n=1000
 pause=3
