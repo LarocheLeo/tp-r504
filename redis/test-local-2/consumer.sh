@@ -1,39 +1,47 @@
 #!/bin/bash
 
+# Seuil d’alarme : si une valeur dépilée dépasse ce seuil,
+# on simule un traitement plus long (ex : anomalie détectée).
+threshold=30000
 
-threshold=30000      # seuil d’alarme
-delay_process=4      # pause en cas d’alarme
-empty_wait=2         # attente si liste vide
+# Temps d’attente en cas d’alarme
+delay_process=4
 
+# Temps d’attente si la liste est vide (ici non utilisé car on quitte)
+empty_wait=2
+
+# Test de connexion à Redis.
 redis-cli DBSIZE >/dev/null
 if ! [ $? = 0 ]
 then
-#	echo "Erreur, pas de connection avec le serveur redis !"
-	exit 1
+    # Ici, je ne fais pas d'affichage volontairement car ce consumer
+    # peut être lancé automatiquement par le script run.sh.
+    exit 1
 fi
 
-while true 
+# Boucle principale : le consumer traite la liste tant qu’il y a du travail
+while true
 do
-	# Récupération de la taille de la liste
-	nb=$(redis-cli --raw LLEN listproject2)
+    # On récupère la taille de la liste.
+    # Cela permet de savoir si on doit continuer ou s’arrêter.
+    nb=$(redis-cli --raw LLEN listproject2)
+
     if [ $nb -gt 0 ]
     then
-        # Dépiler un élément
+        # On dépile un élément.
+        # RPOP est cohérent avec LPUSH côté producer.
         value=$(redis-cli --raw RPOP listproject2)
 
-#        echo "Valeur dépilée : $value"
-
-        # Test du seuil
+        # Si la valeur dépasse le seuil, on simule un traitement plus long.
         if [ $value -gt $threshold ]
         then
-#            echo "ALARME ! Valeur = $value"
             sleep $delay_process
         fi
 
     else
-#        echo "Liste vide, attente 2s."
-#        sleep 2
-         exit 0
+        # Ici, contrairement au test-local-1, on QUITTE le consumer.
+        # C’est volontaire : cela permet au script run.sh de lancer
+        # des consumers supplémentaires uniquement quand nécessaire.
+        exit 0
     fi
 done
-

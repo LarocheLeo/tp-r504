@@ -1,13 +1,15 @@
 FROM alpine:latest
+# Alpine = image légère, parfaite pour des scripts Bash + Redis CLI
 
-# Installation de bash et redis
+# Installer bash et redis-cli
 RUN apk add --no-cache bash redis
 
-# Copie le script producer
+# Copier le script producer dans l'image
 COPY producer.sh /srv/
 
-# Définie le dossier de travail
+# Définir le dossier de travail
 WORKDIR /srv
 
-# Lance le producer au démarrage du conteneur
+# Lancer automatiquement le producer
 CMD ["bash", "-c", "./producer.sh"]
+

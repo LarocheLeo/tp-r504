@@ -1,13 +1,14 @@
 FROM alpine:latest
+# Alpine = image légère, parfaite pour des scripts Bash + Redis CLI
 
-# Installation de bash et redis
+# Installation de bash et redis-cli
 RUN apk add --no-cache bash redis
 
-# Copie le script producer
+# On copie le script consumer dans le conteneur
 COPY consumer.sh /srv/
 
-# Définie le dossier de travail
+# On définit le dossier de travail
 WORKDIR /srv
 
-# Lance le consumer au démarrage du conteneur
+# Commande exécutée automatiquement au démarrage du conteneur
 CMD ["bash", "-c", "./consumer.sh"]

@@ -1,13 +1,13 @@
 FROM alpine:latest
 
-# Installer bash et redis
+# Installer bash et redis-cli
 RUN apk add --no-cache bash redis
 
-# Copier le script producer
+# Copier le script producer dans l'image
 COPY producer.sh /srv/
 
 # Définir le dossier de travail
 WORKDIR /srv
 
-# Lancer le producer au démarrage du conteneur
+# Lancer automatiquement le producer
 CMD ["bash", "-c", "./producer.sh"]

@@ -7,6 +7,7 @@ services:
     container_name: s_redis
     networks:
       - myredis
+    # Redis est le service central : il stocke la file de messages.
 
   s_prod:
     build:
@@ -17,6 +18,7 @@ services:
       - s_redis
     networks:
       - myredis
+    # Le producer dépend de Redis : il doit attendre que Redis soit prêt.
 
   s_cons:
     build:
@@ -27,7 +29,10 @@ services:
       - s_redis
     networks:
       - myredis
+    # Le consumer dépend aussi de Redis : même logique.
 
 networks:
   myredis:
     driver: bridge
+    # Réseau interne Docker Compose permettant aux services de communiquer
+    # via leurs noms (s_redis, s_prod, s_cons).

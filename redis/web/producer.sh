@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # variable 
-PARAM=-u "redis://default:YwDcNmKxZfjO5w8uCWEV839oaEBWSYOS@redis-11321.crce202.eu-west-3-1.ec2.cloud.redislabs.com:11321"
+PARAM=-u "redis://default:++++++
 n=1000
 pause=3
 
